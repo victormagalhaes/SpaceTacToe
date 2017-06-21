@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 
 namespace NeonTacToe
 {
@@ -96,7 +95,7 @@ namespace NeonTacToe
 					return false;
 				}
             }
-            catch (AmbiguousMatchException)
+            catch (Exception ex)
             {
                 if (INumberOfTurns == 9)
                 {
@@ -129,7 +128,7 @@ namespace NeonTacToe
                         Console.WriteLine("Ops. You typed something strange. Try again.");
                     }
                 }
-                catch (AmbiguousMatchException) {
+                catch (Exception e) {
                     Console.WriteLine("Ops. You typed something strange. Try again.");
 				}
 
@@ -157,7 +156,7 @@ namespace NeonTacToe
 						Console.WriteLine("Ops. You typed something strange. Try again.");
 					}
 				}
-				catch (AmbiguousMatchException)
+				catch (Exception e)
 				{
 					Console.WriteLine("Ops. You typed something strange. Try again.");
 				}
